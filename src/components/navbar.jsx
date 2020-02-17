@@ -8,13 +8,18 @@ class NavBar extends Component {
         <a className="navbar-logo" href="voi.com">
           <img className="img-fluid" alt="logo" src={Logo}></img>
         </a>
-
+        <span className="badge badge-pill badge-primary">
+          Money: {this.props.money}
+        </span>
         <span className="badge badge-pill badge-secondary">
-          {this.props.totalCounters}
+          No of VOIs: {this.props.noOfVOIs}
         </span>
 
-        <form class="form-inline">
-          <button class="btn btn-primary" type="submit">
+        <span className="badge badge-pill badge-secondary">
+          CPS: {this.props.totalBonus}
+        </span>
+        <form className="form-inline">
+          <button className="btn btn-primary" type="submit">
             Shop
           </button>
         </form>

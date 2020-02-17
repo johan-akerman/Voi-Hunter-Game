@@ -1,9 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
+import pin from "../images/uncharged.svg";
+import "./styles/general.css";
 
-class Clicker extends Component {
+class Clicker extends React.Component {
   render() {
     return (
-      <button className="btn btn-secondary btn-sm">Click to collect</button>
+      <div className="row" onLoad={this.props.onLoad}>
+        <img
+          className="pin"
+          src={pin}
+          onClick={this.props.onVoiClick}
+          alt="pin"
+        />
+      </div>
     );
   }
 }

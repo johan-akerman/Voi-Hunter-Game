@@ -1,0 +1,21 @@
+.pin {
+  position: absolute;
+  cursor: pointer;
+}
+
+.pin:active {
+  transform: scale(1.03);
+}
+
+.container {
+  background-color: #fff;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+}
+
+.container .row .btn-holder {
+  justify-content: flex-end;
+  display: flex;
+}
