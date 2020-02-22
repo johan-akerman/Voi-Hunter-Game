@@ -1,57 +1,82 @@
 import React, { Component } from "react";
+import Walker from "../images/walker.svg";
+import Car from "../images/car.svg";
+import Voila from "../images/voila.svg";
 
 class Shop extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        {" "}
-        <h5>Walker</h5>
-        <p>
-          {" "}
-          CPS: 1 | Price: {this.props.walkerPrice} | Owned:{" "}
-          <span className={this.getWalkerBadgeClasses()}>
-            {this.props.numberOfWalkers}
-          </span>
-        </p>
-        <button
-          onClick={this.props.onPurchaseWalker}
-          className={this.getWalkerBtnClasses()}
-        >
-          Buy Walker
-        </button>
-        <br />
-        <br />
-        <h5>Car</h5>
-        <p>
-          {" "}
-          CPS: 5 | Price: {this.props.carPrice} | Owned:{" "}
-          <span className={this.getCarBadgeClasses()}>
-            {this.props.numberOfCars}
-          </span>
-        </p>
-        <button
-          onClick={this.props.onPurchaseCar}
-          className={this.getCarBtnClasses()}
-        >
-          Buy Car
-        </button>
-        <br />
-        <br />
-        <h5>Van</h5>
-        <p>
-          {" "}
-          CPS: 10 | Price: {this.props.vanPrice} | Owned:{" "}
-          <span className={this.getVanBadgeClasses()}>
-            {this.props.numberOfVans}
-          </span>
-        </p>
-        <button
-          onClick={this.props.onPurchaseVan}
-          className={this.getVanBtnClasses()}
-        >
-          Buy Van
-        </button>{" "}
+        <div className="row shopItem">
+          <div className="col-sm-2">
+            <img className="img-fluid" alt="logo" src={Walker}></img>
+          </div>
+          <div className="col-sm-7">
+            <h5>Walker</h5>
+            <p>
+              CPS: 1 | Price: {this.props.walkerPrice} | Owned:
+              <span className={this.getWalkerBadgeClasses()}>
+                {this.props.numberOfWalkers}
+              </span>
+            </p>
+          </div>
+          <div className="col-sm-2">
+            <button
+              onClick={this.props.onPurchaseWalker}
+              className={this.getWalkerBtnClasses()}
+            >
+              Buy
+            </button>
+          </div>
+        </div>
+
+        <div className="row shopItem">
+          <div className="col-sm-2">
+            <img className="img-fluid" alt="logo" src={Car}></img>
+          </div>
+          <div className="col-sm-7">
+            <h5>Car</h5>
+            <p>
+              CPS: 5 | Price: {this.props.carPrice} | Owned:{" "}
+              <span className={this.getCarBadgeClasses()}>
+                {this.props.numberOfCars}
+              </span>
+            </p>
+          </div>
+          <div className="col-sm-2">
+            <button
+              onClick={this.props.onPurchaseCar}
+              className={this.getCarBtnClasses()}
+            >
+              Buy
+            </button>
+          </div>
+          <div className="shopItem row">
+            <div className="col-sm-2">
+              <img className="img-fluid" alt="logo" src={Voila}></img>
+            </div>
+
+            <div className="col-sm-7">
+              <h5>Voila</h5>
+              <p>
+                CPS: 10 | Price: {this.props.vanPrice} | Owned:
+                <span className={this.getVanBadgeClasses()}>
+                  {this.props.numberOfVans}
+                </span>
+              </p>
+            </div>
+
+            <div className="col-sm-2">
+              <button
+                onClick={this.props.onPurchaseVan}
+                className={this.getVanBtnClasses()}
+              >
+                Buy
+              </button>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     );
   }

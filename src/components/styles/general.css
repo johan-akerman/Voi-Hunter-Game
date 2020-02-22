@@ -1,21 +1,93 @@
 .pin {
-  position: absolute;
   cursor: pointer;
+  height: 250px;
+  width: auto;
+  position: relative;
+  left: 100px;
+  top: 150px;
 }
 
-.pin:active {
-  transform: scale(1.03);
+body {
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.pin:hover {
+  transform: scale(1.05);
+}
+
+#hej {
+  background-image: url("../../images/map.png") !important;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar.navbar-light {
+  background-color: #f46c63 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sidebar {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  height: 100vh;
+  padding-right: 0 !important;
 }
 
 .container {
   background-color: #fff;
-  justify-content: space-between;
-  flex-direction: column;
   height: 100vh;
-  display: flex;
 }
 
-.container .row .btn-holder {
-  justify-content: flex-end;
-  display: flex;
+.row {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.shopItem {
+  padding: 16px;
+}
+
+.btn-primary {
+  margin-top: 7.5px;
+  background-color: rgb(244, 108, 99) !important;
+  border-color: transparent !important;
+  border-radius: 45px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  height: 50px;
+  font-weight: 600 !important;
+  letter-spacing: 0.7px !important;
+  padding: 10px 25px 10px 25px !important;
+  text-align: center !important;
+  text-decoration-line: none !important;
+  text-decoration-style: solid !important;
+  text-transform: uppercase !important;
+}
+
+.btn-disabled {
+  cursor: not-allowed !important;
+  margin-top: 7.5px;
+  background-color: rgb(244, 108, 99) !important;
+  border-color: transparent !important;
+  border-radius: 45px !important;
+  box-sizing: border-box !important;
+  height: 50px;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.7px !important;
+  padding: 10px 25px 10px 25px !important;
+  text-align: center !important;
+  text-decoration-line: none !important;
+  text-decoration-style: solid !important;
+  text-transform: uppercase !important;
+  opacity: 0.4;
+}
+
+.btn-disabled:hover {
+  cursor: not-allowed !important;
 }

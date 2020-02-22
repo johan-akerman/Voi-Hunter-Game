@@ -5,14 +5,17 @@ import "./styles/general.css";
 class Clicker extends React.Component {
   render() {
     return (
-      <div className="row" onLoad={this.props.onLoad}>
-        <img
-          className="pin"
-          src={pin}
-          onClick={this.props.onVoiClick}
-          alt="pin"
-        />
-      </div>
+      <img
+        onLoad={this.props.onLoad}
+        className="pin"
+        src={pin}
+        style={{
+          top: this.props.topPosition,
+          left: this.props.leftPosition
+        }}
+        onClick={this.props.onVoiClick}
+        alt="pin"
+      />
     );
   }
 }

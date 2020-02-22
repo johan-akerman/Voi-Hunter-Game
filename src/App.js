@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+import { Tabs, Tab } from "react-bootstrap";
 import NavBar from "./components/navbar";
 import Clicker from "./components/clicker";
 import Shop from "./components/shop";
+import Stats from "./components/stats";
 import "./components/styles/general.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   state = {
-    money: 0,
     CollectedVOIs: 0,
     count: 20,
     walkerPrice: 10,
@@ -15,13 +17,22 @@ class App extends Component {
     numberOfCars: 0,
     vanPrice: 375,
     numberOfVans: 0,
-    countPerSecond: 1
+    countPerSecond: 1,
+    left: 50,
+    top: 50
   };
 
   //Function for adding VOI (currency) when the VOI pin is clicked in the clicker component.
   addVOI = () => {
     this.setState(state => ({
-      count: this.state.count + 1
+      count: this.state.count + 1,
+      left:
+        Math.random() * (document.getElementById("hej").clientWidth - 500 - 0) +
+        250,
+      top:
+        Math.random() *
+          (document.getElementById("hej").clientHeight - 500 - 0) +
+        250
     }));
   };
 
@@ -47,13 +58,6 @@ class App extends Component {
         countPerSecond: this.state.countPerSecond + 1
       });
     }
-  };
-
-  deploy = () => {
-    this.setState(state => ({
-      money: this.state.money + this.state.count,
-      count: 0
-    }));
   };
 
   //Function for purchasing a car hunter
@@ -83,37 +87,47 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar
-          money={this.state.money}
-          noOfVOIs={this.state.count}
-          totalBonus={this.state.countPerSecond}
-        />
         <div className="cointainer">
           <div className="row">
-            <div className="col-lg-4 col-md-12 sidebar">
-              <Shop
-                numberOfWalkers={this.state.numberOfWalkers}
-                walkerPrice={this.state.walkerPrice}
-                count={this.state.count}
-                perSecond={this.state.countPerSecond}
-                onPurchaseWalker={this.purchaseWalker}
-                onPurchaseCar={this.purchaseCar}
-                numberOfCars={this.state.numberOfCars}
-                carPrice={this.state.carPrice}
-                onPurchaseVan={this.purchaseVan}
-                numberOfVans={this.state.numberOfVans}
-                vanPrice={this.state.vanPrice}
+            <div className="col-lg-3 col-md-12 sidebar">
+              <NavBar
+                money={this.state.money}
+                noOfVOIs={this.state.count}
+                totalBonus={this.state.countPerSecond}
               />
 
-              <div className="btn-holder">
-                <button onClick={this.deploy} className="btn btn-primary">
-                  Deploy
-                </button>
-              </div>
+              <Tabs defaultActiveKey="Shop" id="uncontrolled-tab-example">
+                <Tab eventKey="Shop" title="Shop">
+                  <Shop
+                    numberOfWalkers={this.state.numberOfWalkers}
+                    walkerPrice={this.state.walkerPrice}
+                    count={this.state.count}
+                    perSecond={this.state.countPerSecond}
+                    onPurchaseWalker={this.purchaseWalker}
+                    onPurchaseCar={this.purchaseCar}
+                    numberOfCars={this.state.numberOfCars}
+                    carPrice={this.state.carPrice}
+                    onPurchaseVan={this.purchaseVan}
+                    numberOfVans={this.state.numberOfVans}
+                    vanPrice={this.state.vanPrice}
+                  />
+                </Tab>
+                <Tab eventKey="Stats" title="Stats">
+                  <Stats
+                    noOfVOIs={this.state.count}
+                    totalBonus={this.state.countPerSecond}
+                  />
+                </Tab>
+              </Tabs>
             </div>
 
-            <div className="col-lg-5 col-md-12 map">
-              <Clicker onLoad={this.auto} onVoiClick={this.addVOI} />
+            <div className="map col-lg-9 col-md-12" id="hej">
+              <Clicker
+                leftPosition={this.state.left}
+                topPosition={this.state.top}
+                onLoad={this.auto}
+                onVoiClick={this.addVOI}
+              />
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../components/styles/general.css";
 
 class Counter extends Component {
   render() {

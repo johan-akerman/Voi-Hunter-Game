@@ -3,6 +3,8 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
-.navbar-logo img {
-  width: 50px !important;
+.navbar-logo {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100px !important;
 }
