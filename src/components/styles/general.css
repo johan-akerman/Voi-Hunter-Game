@@ -17,7 +17,7 @@ body {
   transform: scale(1.05);
 }
 
-#hej {
+#map {
   background-image: url("../../images/map.png") !important;
   background-position: right;
   background-repeat: no-repeat;

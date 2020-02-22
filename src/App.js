@@ -27,11 +27,11 @@ class App extends Component {
     this.setState(state => ({
       count: this.state.count + 1,
       left:
-        Math.random() * (document.getElementById("hej").clientWidth - 500 - 0) +
+        Math.random() * (document.getElementById("map").clientWidth - 500 - 0) +
         250,
       top:
         Math.random() *
-          (document.getElementById("hej").clientHeight - 500 - 0) +
+          (document.getElementById("map").clientHeight - 500 - 0) +
         250
     }));
   };
@@ -121,7 +121,7 @@ class App extends Component {
               </Tabs>
             </div>
 
-            <div className="map col-lg-9 col-md-12" id="hej">
+            <div className="map col-lg-9 col-md-12" id="map">
               <Clicker
                 leftPosition={this.state.left}
                 topPosition={this.state.top}
