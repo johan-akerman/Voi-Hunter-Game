@@ -22,6 +22,7 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .navbar.navbar-light {
@@ -45,7 +46,61 @@ body {
   margin-bottom: 0 !important;
 }
 .shopItem {
-  padding: 16px;
+  font-family: "Overpass Mono";
+  padding-top: 32px !important;
+}
+
+.shopItem h5 {
+  font-weight: bold;
+}
+
+.shopItem p {
+  color: #c1c1c1;
+}
+.nav-link.active {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  color: rgb(244, 108, 99) !important;
+  border-bottom: 2px solid rgb(244, 108, 99) !important;
+}
+
+.nav-link {
+  font-family: "Overpass Mono";
+  font-weight: bold;
+  margin-top: 22px;
+
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #c1c1c1 !important;
+  color: #c1c1c1;
+}
+
+.nav-link:hover {
+  color: rgb(244, 108, 99) !important;
+  border-bottom: 2px solid rgb(244, 108, 99) !important;
+}
+
+.about a {
+  color: rgb(244, 108, 99) !important;
+}
+
+.tab-content {
+  padding: 16px !important;
+  font-family: "Overpass Mono";
+}
+
+.stats h1 {
+  font-family: "Overpass Mono";
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.stats p {
+  font-family: "Overpass Mono";
+
+  color: #c1c1c1;
 }
 
 .btn-primary {
@@ -90,4 +145,14 @@ body {
 
 .btn-disabled:hover {
   cursor: not-allowed !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .tab {
+    display: none !important;
+  }
+
+  .sidebar {
+    height: auto;
+  }
 }
