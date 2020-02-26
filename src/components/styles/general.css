@@ -25,6 +25,14 @@ body {
   height: 100vh;
 }
 
+.mystyle {
+  display: none;
+}
+
+.mystyle2 {
+  height: auto;
+}
+
 .navbar.navbar-light {
   background-color: #f46c63 !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
@@ -147,9 +155,17 @@ body {
   cursor: not-allowed !important;
 }
 
+#myBtn {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
   .tab {
-    display: none !important;
+    /* display: none !important; */
+  }
+
+  #myBtn {
+    display: block;
   }
 
   .sidebar {

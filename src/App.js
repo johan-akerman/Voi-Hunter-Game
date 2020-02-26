@@ -114,13 +114,13 @@ class App extends Component {
         <SimpleStorage parent={this} />
         <div className="cointainer">
           <div className="row">
-            <div className="col-lg-3 col-md-12 sidebar">
+            {/* <div className="col-lg-3 col-md-12 sidebar">
               <NavBar
                 money={this.state.money}
                 noOfVOIs={this.state.count}
                 totalBonus={this.state.countPerSecond}
               />
-              <div className="tab">
+              <div className="tab" id="tab">
                 <Tabs justify defaultActiveKey="Shop">
                   <Tab eventKey="Shop" title="Shop" className="tab-content">
                     <Shop
@@ -174,9 +174,14 @@ class App extends Component {
                   </Tab>
                 </Tabs>
               </div>
-            </div>
+            </div> */}
 
-            <div className="map col-lg-9 col-md-12" id="map">
+            <div className="map col-lg-12 col-md-12" id="map">
+              <NavBar
+                money={this.state.money}
+                noOfVOIs={this.state.count}
+                totalBonus={this.state.countPerSecond}
+              />
               <Clicker
                 leftPosition={this.state.left}
                 topPosition={this.state.top}
