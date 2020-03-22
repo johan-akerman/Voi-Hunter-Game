@@ -19,10 +19,9 @@ body {
 
 #map {
   background-image: url("../../images/map.png") !important;
-  background-position: right;
+
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
 }
 
 .mystyle {

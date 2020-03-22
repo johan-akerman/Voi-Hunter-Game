@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Walker from "../images/walker.svg";
 import Car from "../images/car.svg";
-import Voila from "../images/voila.svg";
+import Voila from "../images/voila.png";
 
 class Shop extends Component {
   state = {};

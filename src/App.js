@@ -19,8 +19,6 @@ class App extends Component {
     vanPrice: 375,
     numberOfVans: 0,
     countPerSecond: 0,
-    left: 50,
-    top: 50,
     noOfUpgrades: 0
   };
 
@@ -35,8 +33,6 @@ class App extends Component {
       vanPrice: 375,
       numberOfVans: 0,
       countPerSecond: 0,
-      left: 50,
-      top: 50,
       noOfUpgrades: 0
     }));
   };
@@ -45,14 +41,7 @@ class App extends Component {
   addVOI = () => {
     this.setState(state => ({
       count: this.state.count + 1,
-      CollectedVOIs: this.state.CollectedVOIs + 1,
-      left:
-        Math.random() * (document.getElementById("map").clientWidth - 500 - 0) +
-        250,
-      top:
-        Math.random() *
-          (document.getElementById("map").clientHeight - 500 - 0) +
-        250
+      CollectedVOIs: this.state.CollectedVOIs + 1
     }));
   };
 
@@ -113,13 +102,13 @@ class App extends Component {
       <React.Fragment>
         <SimpleStorage parent={this} />
         <div className="cointainer">
+          <NavBar
+            money={this.state.money}
+            noOfVOIs={this.state.count}
+            totalBonus={this.state.countPerSecond}
+          />
           <div className="row">
-            {/* <div className="col-lg-3 col-md-12 sidebar">
-              <NavBar
-                money={this.state.money}
-                noOfVOIs={this.state.count}
-                totalBonus={this.state.countPerSecond}
-              />
+            <div className="col-lg-4 col-md-12 sidebar">
               <div className="tab" id="tab">
                 <Tabs justify defaultActiveKey="Shop">
                   <Tab eventKey="Shop" title="Shop" className="tab-content">
@@ -144,7 +133,13 @@ class App extends Component {
                       totalBonus={this.state.countPerSecond}
                       noOfUpgrades={this.state.noOfUpgrades}
                     />
+                  </Tab>
 
+                  <Tab
+                    eventKey="Settings"
+                    title="Settings"
+                    className="Settings tab-content"
+                  >
                     <button
                       onClick={this.reset}
                       className="btn btn-primary btn-reset"
@@ -152,42 +147,12 @@ class App extends Component {
                       Restart game
                     </button>
                   </Tab>
-
-                  <Tab
-                    eventKey="About"
-                    title="About"
-                    className="about tab-content"
-                  >
-                    <h2>About</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi.
-                      <br />
-                      <br />
-                      <bold>Made by:</bold>{" "}
-                      <a href="https://www.linkedin.com/in/johan-akerman/">
-                        Johan Åkerman
-                      </a>
-                    </p>
-                  </Tab>
                 </Tabs>
               </div>
-            </div> */}
+            </div>
 
-            <div className="map col-lg-12 col-md-12" id="map">
-              <NavBar
-                money={this.state.money}
-                noOfVOIs={this.state.count}
-                totalBonus={this.state.countPerSecond}
-              />
-              <Clicker
-                leftPosition={this.state.left}
-                topPosition={this.state.top}
-                onLoad={this.auto}
-                onVoiClick={this.addVOI}
-              />
+            <div className="map col-lg-8 col-md-12" id="map">
+              <Clicker onLoad={this.auto} onVoiClick={this.addVOI} />
             </div>
           </div>
         </div>
