@@ -1,3 +1,52 @@
+.mainContainer {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#theRow {
+  height: 100vh;
+  margin: 0;
+}
+
+.count {
+  font-family: "Overpass Mono";
+  font-size: 15px;
+  color: #fff;
+}
+
+.badge-count {
+  background-color: #fff;
+  margin-left: 8px;
+  font-size: 14px !important;
+  color: #f46c63;
+}
+
+#sidebarColumn {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  padding-right: 0 !important;
+  padding-left: 0;
+}
+
+#mapColumn {
+  background-image: url("../../images/map.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* Navbar */
+.navbar.navbar-light {
+  background-color: #f46c63 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.navbar-logo {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100px;
+}
+
 .pin {
   cursor: pointer;
   height: 250px;
@@ -7,45 +56,8 @@
   top: 150px;
 }
 
-body {
-  max-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
 .pin:hover {
   transform: scale(1.05);
-}
-
-#map {
-  background-image: url("../../images/map.png") !important;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.mystyle {
-  display: none;
-}
-
-.mystyle2 {
-  height: auto;
-}
-
-.navbar.navbar-light {
-  background-color: #f46c63 !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-}
-
-.sidebar {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-  height: 100vh;
-  padding-right: 0 !important;
-}
-
-.container {
-  background-color: #fff;
-  height: 100vh;
 }
 
 .row {
@@ -63,6 +75,7 @@ body {
 
 .shopItem p {
   color: #c1c1c1;
+  font-size: 13px;
 }
 .nav-link.active {
   border-top: none !important;
@@ -76,7 +89,6 @@ body {
   font-family: "Overpass Mono";
   font-weight: bold;
   margin-top: 22px;
-
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
@@ -94,7 +106,8 @@ body {
 }
 
 .tab-content {
-  padding: 16px !important;
+  padding-top: 8px;
+  padding-left: 8px;
   font-family: "Overpass Mono";
 }
 
@@ -118,11 +131,11 @@ body {
   box-sizing: border-box !important;
   color: rgb(255, 255, 255) !important;
   cursor: pointer !important;
-  font-size: 20px !important;
-  height: 50px;
+  font-size: 15px !important;
+  height: 46px;
   font-weight: 600 !important;
   letter-spacing: 0.7px !important;
-  padding: 10px 25px 10px 25px !important;
+  padding: 10px 30px 10px 30px !important;
   text-align: center !important;
   text-decoration-line: none !important;
   text-decoration-style: solid !important;
@@ -136,13 +149,13 @@ body {
   border-color: transparent !important;
   border-radius: 45px !important;
   box-sizing: border-box !important;
-  height: 50px;
+  height: 46px;
   color: rgb(255, 255, 255) !important;
   cursor: pointer !important;
-  font-size: 20px !important;
+  font-size: 15px !important;
   font-weight: 600 !important;
   letter-spacing: 0.7px !important;
-  padding: 10px 25px 10px 25px !important;
+  padding: 10px 30px 10px 30px !important;
   text-align: center !important;
   text-decoration-line: none !important;
   text-decoration-style: solid !important;
@@ -158,16 +171,63 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
-  .tab {
-    /* display: none !important; */
+.hamburger {
+  display: block;
+}
+
+.cross {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .navbar {
+    padding: 8px !important;
+  }
+
+  .count {
+    padding-top: 10px;
+  }
+
+  .navbar-logo {
+    width: 75px;
+  }
+  #sidebarColumn {
+    display: none;
+  }
+
+  .pin {
+    height: 150px;
   }
 
   #myBtn {
     display: block;
   }
 
-  .sidebar {
-    height: auto;
+  .cross {
+    display: none;
+  }
+
+  .toggleHamburger {
+    display: none !important;
+  }
+
+  .toggleCross {
+    display: block !important;
+  }
+
+  #myBtn {
+    background: url("/src/images/voi-hamburger-menu.png");
+  }
+
+  .image {
+    padding: 0px !important;
+  }
+
+  .smallScreenTab {
+    display: block !important;
+  }
+
+  .smallScreenMap {
+    display: none !important;
   }
 }

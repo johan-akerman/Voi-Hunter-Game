@@ -6,7 +6,7 @@ import "./styles/general.css";
 
 var imagesArray = [left, right];
 
-class Clicker extends React.Component {
+class VOI extends React.Component {
   state = {
     num: 0,
     leftPosition: 50,
@@ -22,10 +22,14 @@ class Clicker extends React.Component {
     console.log(document.getElementsByClassName("pin").clientWidth);
     this.setState(state => ({
       leftPosition: Math.floor(
-        Math.random() * (document.getElementById("map").clientWidth - 350) + 0
+        Math.random() *
+          (document.getElementById("mapColumn").clientWidth - 350) +
+          0
       ),
       topPosition: Math.floor(
-        Math.random() * (document.getElementById("map").clientHeight - 350) + 0
+        Math.random() *
+          (document.getElementById("mapColumn").clientHeight - 350) +
+          0
       ),
       num: Math.floor(Math.random() * imagesArray.length)
     }));
@@ -44,7 +48,6 @@ class Clicker extends React.Component {
           <source src={clickSound}></source>>
         </audio>
         <img
-          onLoad={this.props.onLoad}
           className="pin"
           src={imagesArray[this.state.num]}
           style={{
@@ -59,4 +62,4 @@ class Clicker extends React.Component {
   }
 }
 
-export default Clicker;
+export default VOI;

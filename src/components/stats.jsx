@@ -11,7 +11,7 @@ class Stats extends Component {
           </div>
 
           <div className="col-sm-6">
-            <h1>{this.props.CollectedVOIs}</h1>
+            <h1>{this.props.CollectedVOIsAllTime}</h1>
             <p>Collected VOIs (all time)</p>
           </div>
 

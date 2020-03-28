@@ -1,10 +1,14 @@
 import React, { Component } from "react";
-import "./styles/navbar.css";
+import "./styles/general.css";
 import Logo from "../images/voi_logo_white.svg";
+import Hamburger from "../images/voi-hamburger-menu.png";
+
 class NavBar extends Component {
   toggleMenu = () => {
-    var tab = document.getElementById("tab");
-    tab.classList.toggle("mystyle");
+    var sidebarColumn = document.getElementById("sidebarColumn");
+    var mapColumn = document.getElementById("mapColumn");
+    sidebarColumn.classList.toggle("smallScreenTab");
+    mapColumn.classList.toggle("smallScreenMap");
   };
 
   render() {
@@ -13,18 +17,15 @@ class NavBar extends Component {
         <a className="navbar-logo" href="voi.com">
           <img className="img-fluid" alt="logo" src={Logo}></img>
         </a>
-
-        <button onClick={this.toggleMenu} className="btn" id="myBtn">
-          Toggle Background
-        </button>
-
-        {/*    <span className="badge badge-pill badge-secondary">
-          No of VOIs: {this.props.noOfVOIs}
+        <span className="count">
+          Collected VOIs:
+          <span className="badge badge-pill badge-count">
+            {this.props.noOfVOIs}
+          </span>
         </span>
- */}
-        {/*         <span className="badge badge-pill badge-secondary">
-          CPS: {this.props.totalBonus}
-        </span> */}
+        <button onClick={this.toggleMenu} className="btn" id="myBtn">
+          <img className="img-fluid hamburger" alt="logo" src={Hamburger}></img>
+        </button>
       </nav>
     );
   }
