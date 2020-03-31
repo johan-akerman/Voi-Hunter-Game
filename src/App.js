@@ -108,13 +108,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="mainContainer" onLoad={this.auto}>
+      <div className="mainContainer">
         <SimpleStorage parent={this} />
-        <NavBar
-          money={this.state.money}
-          noOfVOIs={this.state.CollectedVOIs}
-          totalBonus={this.state.CollectedVOIsPerSecond}
-        />
+        <NavBar noOfVOIs={this.state.CollectedVOIs} />
         <div className="cointainer">
           <div className="row" id="theRow">
             <div id="sidebarColumn" className="col-xl-4 col-lg-6 col-md-12">
@@ -125,7 +121,6 @@ class App extends Component {
                       numberOfWalkers={this.state.numberOfWalkers}
                       walkerPrice={this.state.walkerPrice}
                       CollectedVOIs={this.state.CollectedVOIs}
-                      perSecond={this.state.CollectedVOIsPerSecond}
                       onPurchaseWalker={this.purchaseWalker}
                       onPurchaseCar={this.purchaseCar}
                       numberOfCars={this.state.numberOfCars}
