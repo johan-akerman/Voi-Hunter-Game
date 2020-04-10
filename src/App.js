@@ -10,8 +10,8 @@ import SimpleStorage from "react-simple-storage";
 
 class App extends Component {
   state = {
-    CollectedVOIsAllTime: 10,
-    CollectedVOIs: 10,
+    CollectedVOIsAllTime: 0,
+    CollectedVOIs: 0,
     numberOfWalkers: 0,
     numberOfCars: 0,
     numberOfVoilas: 0,
@@ -22,6 +22,7 @@ class App extends Component {
     noOfUpgrades: 0,
   };
 
+  //Calls addBonus() function once every second
   componentDidMount() {
     this.interval = setInterval(() => this.addBonus(), 1000);
   }
@@ -42,8 +43,8 @@ class App extends Component {
   //Function for restarting the game. Resets the state to initial values.
   restartGame = () => {
     this.setState((state) => ({
-      CollectedVOIsAllTime: 10,
-      CollectedVOIs: 10,
+      CollectedVOIsAllTime: 0,
+      CollectedVOIs: 0,
       numberOfWalkers: 0,
       numberOfCars: 0,
       numberOfVoilas: 0,
@@ -77,35 +78,6 @@ class App extends Component {
       });
     }
   };
-
-  purchaseUpgrade(upgrade) {
-    console.log(upgrade);
-  }
-
-  // purchase = () => {
-  //   if (this.state.CollectedVOIs >= this.state.item.price) {
-  //     this.setState({
-  //       item.price: Math.round(item.initialPrice * 1.15 ** (this.state.numberofItem + 1)),
-  //       CollectedVOIs: Math.round(
-  //         this.state.CollectedVOIs - this.state.itemPrice
-  //       ),
-  //       CollectedVOIsPerSecond: this.state.CollectedVOIsPerSecond + item.CPS,
-
-  //       if ((item) == walker) {
-  //         numberOfWalkers++;
-  //       }
-
-  //       if ((item) == car) {
-  //         numberOfCars++;
-  //       }
-
-  //       if ((item) == voila) {
-  //         numberofVoilas++;
-  //       }
-  //       noOfUpgrades: this.state.noOfUpgrades + 1,
-  //     });
-  //   }
-  // };
 
   //Function for purchasing a Car
   purchaseCar = () => {
@@ -144,7 +116,7 @@ class App extends Component {
         <NavBar noOfVOIs={this.state.CollectedVOIs} />
         <div className="cointainer">
           <div className="row" id="theRow">
-            <div id="sidebarColumn" className="col-xl-4 col-lg-6 col-md-12">
+            <div id="sidebarColumn" className="col-xl-4 col-lg-12">
               <div className="tab" id="tab">
                 <Tabs justify defaultActiveKey="Shop">
                   <Tab eventKey="Shop" title="Shop" className="tab-content">
@@ -181,19 +153,12 @@ class App extends Component {
                     >
                       Restart game
                     </button>
-
-                    <button
-                      onClick={this.purchaseUpgrade(this.state.CollectedVOIs)}
-                      className="btn btn-primary btn-reset"
-                    >
-                      myfunction
-                    </button>
                   </Tab>
                 </Tabs>
               </div>
             </div>
 
-            <div id="mapColumn" className="col-xl-8 col-lg-6  col-md-12">
+            <div id="mapColumn" className="col-xl-8 col-lg-12">
               <VOI onVoiClick={this.addVOI} />
             </div>
           </div>

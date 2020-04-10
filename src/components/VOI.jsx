@@ -10,7 +10,7 @@ class VOI extends React.Component {
   state = {
     num: 0,
     leftPosition: 50,
-    topPosition: 50
+    topPosition: 50,
   };
 
   playAudio() {
@@ -19,8 +19,7 @@ class VOI extends React.Component {
   }
 
   generateNewVOI() {
-    console.log(document.getElementsByClassName("pin").clientWidth);
-    this.setState(state => ({
+    this.setState((state) => ({
       leftPosition: Math.floor(
         Math.random() *
           (document.getElementById("mapColumn").clientWidth - 350) +
@@ -31,7 +30,10 @@ class VOI extends React.Component {
           (document.getElementById("mapColumn").clientHeight - 350) +
           0
       ),
-      num: Math.floor(Math.random() * imagesArray.length)
+
+      height: document.getElementById("mapColumn").clientHeight,
+
+      num: Math.floor(Math.random() * imagesArray.length),
     }));
   }
 
@@ -52,7 +54,7 @@ class VOI extends React.Component {
           src={imagesArray[this.state.num]}
           style={{
             top: this.state.topPosition,
-            left: this.state.leftPosition
+            left: this.state.leftPosition,
           }}
           onClick={this.onClick}
           alt="VOI"

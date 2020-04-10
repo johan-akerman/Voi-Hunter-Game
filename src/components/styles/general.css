@@ -35,7 +35,6 @@
   height: 100%;
 }
 
-/* Navbar */
 .navbar.navbar-light {
   background-color: #f46c63 !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
@@ -179,7 +178,7 @@
   display: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1200px) {
   .navbar {
     padding: 8px !important;
   }
