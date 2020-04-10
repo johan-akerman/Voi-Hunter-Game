@@ -11,7 +11,6 @@ Play the game here: https://johan-akerman.github.io/Voi-Hunter-Game/
 4. Keep track of your progress in the "stats" tab.
 5. Want to start over? Restart the game in the "settings" tab.
 
-```
 ## Screenshots
 <img src="/src/images/preview-desktop.png" alt="Logo"
 	title="Logo" width="600" />
