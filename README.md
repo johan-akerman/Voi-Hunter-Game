@@ -14,6 +14,6 @@ Play the game here: https://johan-akerman.github.io/Voi-Hunter-Game/
 ## Screenshots
 <img src="/src/images/preview-desktop.png" alt="Logo"
 	title="Logo" width="600" />
-<img src="/src/images/pewview-mobile.mov" alt="Logo"
+<img src="/src/images/pewview-mobile.gif" alt="Logo"
 	title="Logo" width="200" />
 ```
