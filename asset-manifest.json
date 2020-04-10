@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Voi-Hunter-Game/static/css/main.ef930b11.chunk.css",
+    "main.js": "/Voi-Hunter-Game/static/js/main.6d0759c8.chunk.js",
+    "main.js.map": "/Voi-Hunter-Game/static/js/main.6d0759c8.chunk.js.map",
+    "runtime-main.js": "/Voi-Hunter-Game/static/js/runtime-main.44a68ffc.js",
+    "runtime-main.js.map": "/Voi-Hunter-Game/static/js/runtime-main.44a68ffc.js.map",
+    "static/css/2.25d2dfdd.chunk.css": "/Voi-Hunter-Game/static/css/2.25d2dfdd.chunk.css",
+    "static/js/2.b7a6ba16.chunk.js": "/Voi-Hunter-Game/static/js/2.b7a6ba16.chunk.js",
+    "static/js/2.b7a6ba16.chunk.js.map": "/Voi-Hunter-Game/static/js/2.b7a6ba16.chunk.js.map",
+    "index.html": "/Voi-Hunter-Game/index.html",
+    "precache-manifest.b0d919ea6da9d73e9f688ba4e1cd4e3c.js": "/Voi-Hunter-Game/precache-manifest.b0d919ea6da9d73e9f688ba4e1cd4e3c.js",
+    "service-worker.js": "/Voi-Hunter-Game/service-worker.js",
+    "static/css/2.25d2dfdd.chunk.css.map": "/Voi-Hunter-Game/static/css/2.25d2dfdd.chunk.css.map",
+    "static/css/main.ef930b11.chunk.css.map": "/Voi-Hunter-Game/static/css/main.ef930b11.chunk.css.map",
+    "static/js/2.b7a6ba16.chunk.js.LICENSE.txt": "/Voi-Hunter-Game/static/js/2.b7a6ba16.chunk.js.LICENSE.txt",
+    "static/media/click.mp3": "/Voi-Hunter-Game/static/media/click.268e5a66.mp3",
+    "static/media/general.css": "/Voi-Hunter-Game/static/media/map.69cf116d.png",
+    "static/media/voi-left.png": "/Voi-Hunter-Game/static/media/voi-left.bfe92c83.png",
+    "static/media/voi-right.png": "/Voi-Hunter-Game/static/media/voi-right.924321d0.png",
+    "static/media/voi_logo_white.svg": "/Voi-Hunter-Game/static/media/voi_logo_white.68ba0c23.svg",
+    "static/media/voila.png": "/Voi-Hunter-Game/static/media/voila.abff012e.png",
+    "static/media/walker.png": "/Voi-Hunter-Game/static/media/walker.7b129949.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44a68ffc.js",
+    "static/css/2.25d2dfdd.chunk.css",
+    "static/js/2.b7a6ba16.chunk.js",
+    "static/css/main.ef930b11.chunk.css",
+    "static/js/main.6d0759c8.chunk.js"
+  ]
+}
