@@ -13,7 +13,7 @@ Play the game here: https://johan-akerman.github.io/Voi-Hunter-Game/
 
 ## Screenshots
 <img src="/src/images/preview-desktop.png" alt="Logo"
-	title="Desktop preview" width="600" />
+	title="Desktop preview" width="600" /> 
 <img src="/src/images/preview-mobile.gif" alt="Logo"
-	title="Mobile preview" width="200" />
+	title="Mobile preview" width="220" />
 ```
