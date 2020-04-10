@@ -1,6 +1,6 @@
-# Cookie Clicker - Voi Scooters
+# Cookie Clicker - Voi Scooters Edition
 
-A simple cookie clicker game with a Voi scooters theme built with React and bootstrap. Works on desktop and mobile.
+A simple cookie clicker game with a Voi scooters theme. Works on desktop and mobile and is mainly built with React and bootstrap. Stores the players progress in the browsers cookies. 
 Play the game here: https://johan-akerman.github.io/Voi-Hunter-Game/
 
 ## Instructions
