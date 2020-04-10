@@ -10,8 +10,8 @@ import SimpleStorage from "react-simple-storage";
 
 class App extends Component {
   state = {
-    CollectedVOIsAllTime: 0,
-    CollectedVOIs: 0,
+    CollectedVOIsAllTime: 10,
+    CollectedVOIs: 10,
     numberOfWalkers: 0,
     numberOfCars: 0,
     numberOfVoilas: 0,
@@ -19,14 +19,31 @@ class App extends Component {
     carPrice: 200,
     voilaPrice: 375,
     CollectedVOIsPerSecond: 0,
-    noOfUpgrades: 0
+    noOfUpgrades: 0,
+  };
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.addBonus(), 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  //Function collecting all the bonuses based on earlier purchases
+  addBonus = () => {
+    this.setState((state) => ({
+      CollectedVOIs:
+        this.state.CollectedVOIs + this.state.CollectedVOIsPerSecond,
+      CollectedVOIsAllTime:
+        this.state.CollectedVOIsAllTime + this.state.CollectedVOIsPerSecond,
+    }));
   };
 
   //Function for restarting the game. Resets the state to initial values.
   restartGame = () => {
-    this.setState(state => ({
-      CollectedVOIsAllTime: 0,
-      CollectedVOIs: 0,
+    this.setState((state) => ({
+      CollectedVOIsAllTime: 10,
+      CollectedVOIs: 10,
       numberOfWalkers: 0,
       numberOfCars: 0,
       numberOfVoilas: 0,
@@ -34,30 +51,15 @@ class App extends Component {
       carPrice: 200,
       voilaPrice: 375,
       CollectedVOIsPerSecond: 0,
-      noOfUpgrades: 0
-    }));
-  };
-
-  //Function for running the addBonus function once a second. Runs onLoad in the VOI component.
-  auto = () => {
-    setInterval(this.addBonus, 1000);
-  };
-
-  //Function collecting all the bonuses based on earlier purchases
-  addBonus = () => {
-    this.setState(state => ({
-      CollectedVOIs:
-        this.state.CollectedVOIs + this.state.CollectedVOIsPerSecond,
-      CollectedVOIsAllTime:
-        this.state.CollectedVOIsAllTime + this.state.CollectedVOIsPerSecond
+      noOfUpgrades: 0,
     }));
   };
 
   //Function for adding VOI (currency) when the VOI pin is clicked in the VOI component.
   addVOI = () => {
-    this.setState(state => ({
+    this.setState((state) => ({
       CollectedVOIs: this.state.CollectedVOIs + 1,
-      CollectedVOIsAllTime: this.state.CollectedVOIsAllTime + 1
+      CollectedVOIsAllTime: this.state.CollectedVOIsAllTime + 1,
     }));
   };
 
@@ -71,10 +73,39 @@ class App extends Component {
         ),
         CollectedVOIsPerSecond: this.state.CollectedVOIsPerSecond + 1,
         numberOfWalkers: this.state.numberOfWalkers + 1,
-        noOfUpgrades: this.state.noOfUpgrades + 1
+        noOfUpgrades: this.state.noOfUpgrades + 1,
       });
     }
   };
+
+  purchaseUpgrade(upgrade) {
+    console.log(upgrade);
+  }
+
+  // purchase = () => {
+  //   if (this.state.CollectedVOIs >= this.state.item.price) {
+  //     this.setState({
+  //       item.price: Math.round(item.initialPrice * 1.15 ** (this.state.numberofItem + 1)),
+  //       CollectedVOIs: Math.round(
+  //         this.state.CollectedVOIs - this.state.itemPrice
+  //       ),
+  //       CollectedVOIsPerSecond: this.state.CollectedVOIsPerSecond + item.CPS,
+
+  //       if ((item) == walker) {
+  //         numberOfWalkers++;
+  //       }
+
+  //       if ((item) == car) {
+  //         numberOfCars++;
+  //       }
+
+  //       if ((item) == voila) {
+  //         numberofVoilas++;
+  //       }
+  //       noOfUpgrades: this.state.noOfUpgrades + 1,
+  //     });
+  //   }
+  // };
 
   //Function for purchasing a Car
   purchaseCar = () => {
@@ -86,7 +117,7 @@ class App extends Component {
         ),
         CollectedVOIsPerSecond: this.state.CollectedVOIsPerSecond + 5,
         numberOfCars: this.state.numberOfCars + 1,
-        noOfUpgrades: this.state.noOfUpgrades + 1
+        noOfUpgrades: this.state.noOfUpgrades + 1,
       });
     }
   };
@@ -101,7 +132,7 @@ class App extends Component {
         ),
         CollectedVOIsPerSecond: this.state.CollectedVOIsPerSecond + 10,
         numberOfVoilas: this.state.numberOfVoilas + 1,
-        noOfUpgrades: this.state.noOfUpgrades + 1
+        noOfUpgrades: this.state.noOfUpgrades + 1,
       });
     }
   };
@@ -149,6 +180,13 @@ class App extends Component {
                       className="btn btn-primary btn-reset"
                     >
                       Restart game
+                    </button>
+
+                    <button
+                      onClick={this.purchaseUpgrade(this.state.CollectedVOIs)}
+                      className="btn btn-primary btn-reset"
+                    >
+                      myfunction
                     </button>
                   </Tab>
                 </Tabs>
