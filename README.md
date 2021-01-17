@@ -1,8 +1,8 @@
-# Cookie Clicker - Voi Scooters Edition
+# Cookie Clicker - Voi Scooters Edition 🛴🍪
 
-A simple cookie clicker game with a Voi scooters theme. Works on desktop and mobile and is mainly built with React and bootstrap. Stores the players progress in the browsers cookies. 
+A simple cookie clicker game with a Voi scooters theme. Works on desktop and mobile and is mainly built with React and bootstrap. Stores the players progress in the browsers cookies 
 
-## Instructions
+## How to play
 
 1. Help Voi collect their uncharged scooters by clicking on them on the map.
 2. Buy various upgrades in the shop and improve your count per second (CPS). 
