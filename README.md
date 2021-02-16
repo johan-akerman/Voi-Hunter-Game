@@ -1,6 +1,6 @@
 # Cookie Clicker - Voi Scooters Edition 🛴
 
-My first React JS project was a simple cookie clicker game with a Voi scooters theme. It is responsive and works both on desktop and mobile. It is built with React and Bootstrap and it stores the players progress in the browsers cookies (its a cookie clicker game, what did you expect?) 🍪
+My first React JS project was a simple cookie clicker game with a Voi scooters theme. It is responsive and works both on desktop and mobile. It is built with React and Bootstrap and it stores the players progress in the browsers cookies. It's a cookie clicker game, what did you expect? 😉🍪
 
 ## How to play
 
