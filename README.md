@@ -17,3 +17,5 @@ My first React JS project was a simple cookie clicker game with a Voi scooters t
 	title="Desktop preview" width="600" /> 
 <img src="/src/images/preview-mobile.gif" alt="Logo"
 	title="Mobile preview" width="220" />
+
+Desktop and mobile preview
